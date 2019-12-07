@@ -1,0 +1,38 @@
+/*applies to everything*/
+h1 {
+  color: "green";
+}
+
+p {
+  color: "red"
+}
+
+.navbar{ background:#5da289;}
+
+.nav-link , .navbar-brand{ color: #f4f4f4; cursor: pointer;}
+
+.nav-link{ margin-right: 1em !important;}
+
+.navbar-brand:hover{ background: #9cc6b6; color: #ec1369; }
+
+.nav-link:hover{ background: #9cc6b6; color: #ec1369; }
+
+.navbar-collapse{ justify-content: flex-end;}
+
+.navbar-toggler{  background:#fff !important;}
+
+.header{
+ background-image: url("https://live.staticflickr.com/65535/48969712752_be1ca7d663_k.jpg");
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+}
+
+.overlay{
+ position: absolute;
+ min-height: 100%;
+ min-width: 100%;
+ left: 0;
+ top: 0;
+ background: rgba(100, 100, 100, 0.85);
+}

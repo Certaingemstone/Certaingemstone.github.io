@@ -16,6 +16,7 @@ body {
 .column {
   float: top;
   width: 25%;
+  margin: auto;
   padding: 23px;
 }
 .row::after {
@@ -59,6 +60,7 @@ body {
 }
 
 .description{
+    text-align: center;
     font-family: 'Overpass Mono';
     position: absolute;
     top: 30%;

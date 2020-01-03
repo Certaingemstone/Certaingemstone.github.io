@@ -1,25 +1,12 @@
 /*applies to everything*/
-h1 {
-  font-size:36pt;
-}
-
 h3 {
-  font-size:24pt;
   color: #eedc6e;
-}
-
-p {
-  font-size:16pt;
 }
 
 body {
   background-color: rgba(15, 18, 30, 1);
   font-family: 'Overpass Mono';
   color: #f4f4f4;
-}
-
-div {
-  padding: 10px;
 }
 
 .column {

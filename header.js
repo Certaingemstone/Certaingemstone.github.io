@@ -7,6 +7,9 @@ document.getElementById("NAVMENU").innerHTML =
   '<li class="nav-item">' +
     '<a class="nav-link" data-value="about" href="about.html">About</a>        </li>' +
     '<li class="nav-item">' +
+      '<a class="nav-link" data-value="gallery" href="gallery.html">Gallery</a>' +
+    '</li>' +
+    '<li class="nav-item">' +
       '<a class="nav-link" data-value="projects" href="projects.html">Projects</a>' +
     '</li>' +
     '<li class="nav-item">' +

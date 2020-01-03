@@ -1,6 +1,7 @@
 /*applies to everything*/
-h1 {
-  color: "green";
+
+h3 {
+  color: #eedc6e;
 }
 
 p {
@@ -17,12 +18,18 @@ body {
   float: top;
   width: 25%;
   margin: auto;
-  padding: 23px;
+  padding: 10px;
+  filter: opacity(80%);
+}
+.column:hover {
+  filter: opacity(100%);
+  border-radius: 5%;
 }
 .row::after {
   content: "";
   clear: both;
   display: table;
+  margin: auto;
 }
 
 .navbar{ background: rgba(15, 18, 30, 0.5);}
@@ -59,8 +66,18 @@ body {
  background: rgba(10, 10, 10, 0.5);
 }
 
-.description{
+.descriptioncent{
     text-align: center;
+    font-family: 'Overpass Mono';
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    right: 20%;
+    padding: 2em;
+    text-shadow: 2px 2px #0f0e0c
+}
+
+.description{
     font-family: 'Overpass Mono';
     position: absolute;
     top: 30%;

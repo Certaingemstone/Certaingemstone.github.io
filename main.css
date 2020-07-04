@@ -46,10 +46,21 @@ body {
 .btn-outline-secondary{ color: #f4f4f4; background-color: #000000; border-color: #eedc6e; border-width: medium;}
 
 .header{
- background-image: url("https://live.staticflickr.com/65535/48969712752_be1ca7d663_k.jpg");
+ animation: fadeInAnimation ease 2s;
+ animation-iteration-count: 1;
+ animation-fill-mode: forwards;
  background-attachment: fixed;
  background-size: cover;
  background-position: center;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
 
 .overlay{

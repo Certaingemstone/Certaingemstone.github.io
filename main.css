@@ -86,8 +86,8 @@ body {
 .description{
     font-family: 'Overpass Mono';
     position: absolute;
-    top: 30%;
     margin: auto;
+    top: 30%;
     right: 20%;
     left: 20%;
     padding: 2em;

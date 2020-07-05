@@ -8,7 +8,7 @@ document.getElementById("NAVMENU").innerHTML =
     '<a class="nav-link" data-value="about" href="about.html">About</a>        </li>'
     +
     '<li class="nav-item">' +
-      '<a class="nav-link" data-value="gallery" href="gallery.html">Gallery</a>' +
+      '<a class="nav-link" data-value="gallery" href="https://www.flickr.com/photos/certaingemstone/albums/72157714975988782">Gallery</a>' +
     '</li>' +
 
     '<li class="nav-item">' +

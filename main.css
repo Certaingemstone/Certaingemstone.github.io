@@ -18,12 +18,16 @@ h3 a {
 }
 
 .row {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  margin: 0 5% 0 5%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 6px 6px;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create three equal columns that sits next to each other */
 .column {
   font-family: 'Overpass Mono';
   flex: 25%;
@@ -32,12 +36,16 @@ h3 a {
   filter: opacity(75%);
 }
 
+.column-proj {
+  max-width: 25%;
+}
+
 .column img {
   vertical-align: middle;
   width: 100%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Responsive layout - makes a two column-layout */
 @media screen and (max-width: 800px) {
   .column {
     flex: 50%;
@@ -45,7 +53,7 @@ h3 a {
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes one column */
 @media screen and (max-width: 600px) {
   .column {
     flex: 100%;
@@ -55,7 +63,7 @@ h3 a {
 
 .column:hover {
   filter: opacity(100%);
-  border-radius: 5%;
+  border-radius: 10%;
 }
 .row::after {
   content: "";

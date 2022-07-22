@@ -24,7 +24,8 @@ h3 a {
   margin: 0 5% 0 5%;
   display: flex;
   flex-wrap: wrap;
-  padding: 6px 6px;
+  padding: 6px 6px 6px 6px;
+  vertical-align: middle;
 }
 
 /* Create three equal columns that sits next to each other */
@@ -32,7 +33,7 @@ h3 a {
   font-family: 'Overpass Mono';
   flex: 25%;
   max-width: 33%;
-  padding: 0 6px;
+  padding: 6px 6px;
   filter: opacity(75%);
 }
 
@@ -78,9 +79,13 @@ h3 a {
 
 .nav-link{ margin-right: 1em !important;}
 
+.dropdown-item{ background: #f4f4f4; color: #0f0e0c}
+
 .navbar-brand:hover{ background: #0f0e0c; color: #f4f4f4; }
 
 .nav-link:hover{ background: #0f0e0c; color: #f4f4f4; }
+
+.dropdown-item:hover{ background: #0f0e0c; color: #f4f4f4; }
 
 .navbar-collapse{ justify-content: flex-end;}
 

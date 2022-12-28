@@ -1,246 +1,198 @@
-/*hack to make index.html content respond*/
-.lg-view{
-  display:inline-block;
-}
-
-.sm-view{
-  display:none;
-}
-
-@media screen and (max-width: 600px) {
-  .lg-view {
-    display: none;
-  }
-  .sm-view {
-    display: inline-block;
-  }
-}
-
-/*applies to everything*/
-html {
-  font-size: calc(15px + 0.39vw);
-}
-
-h1 {
-  font-size: 1.8rem;
-}
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.3rem;
-  color: #eedc6e;
+:root {
+  --c1: #1CA5EA;
+  --c2: #3A0851;
 }
 
 body {
-  background-color: rgba(15, 18, 30, 1);
-  font-family: 'Overpass Mono';
-  color: #f4f4f4;
+  background: linear-gradient(100deg, var(--c1) 0%, var(--c2) 100%);
+  margin: 0px;
 }
 
-a:link {
-  color: #f4f4f4;
+h1 {
+  font-family: 'Overpass Mono', serif;
+  font-size: clamp(1rem, 5vw, 5rem);
+  text-decoration: none;
+  text-shadow: 2px 2px 4px black;
+  color: #eedc6e;
+}
+
+h2 {
+  color: black;
+  font-family: 'Overpass Mono', serif;
+  font-size: clamp(1rem, 3vw, 3rem);
+  text-decoration: none;
+}
+
+h3 {
+  color: white;
+  font-family: 'Overpass Mono', serif;
+  font-size: clamp(1rem, 3vw, 3rem);
+  text-decoration: none;
+  text-shadow: 2px 2px 4px black;
 }
 
 h3 a {
-  color: #f4f4f4;
+  color: #eedc6e;
 }
 
-.row {
-  animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  margin: 0 5% 0 5%;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 6px 6px 6px 6px;
-  vertical-align: middle;
-}
-
-/* Create three equal columns that sits next to each other */
-.column {
-  font-family: 'Overpass Mono';
-  flex: 25%;
-  max-width: 33%;
-  padding: 6px 6px;
-  filter: opacity(75%);
-}
-
-.column-proj {
-  max-width: 25%;
-}
-
-.column img {
-  vertical-align: middle;
-  width: 100%;
-}
-
-/* Responsive layout - makes a two column-layout */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes one column */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-
-.card-columns {
-  animation: fadeInAnimation ease 4s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-/* Responsive layout for bootstrap card-columns */
-@media (min-width: 576px) {
-  .card-columns {
-      column-count: 2;
-  }
-}
-
-@media (min-width: 768px) {
-  .card-columns {
-      column-count: 3;
-  }
-}
-
-@media (min-width: 992px) {
-  .card-columns {
-      column-count: 4;
-  }
-}
-
-.column:hover {
-  filter: opacity(100%);
-  border-radius: 10%;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-  margin: auto;
-}
-
-.navbar{ background: rgba(15, 18, 30, 0.5);}
-
-.nav-link , .navbar-brand{ color: #eedc6e; cursor: pointer; font-family: 'Overpass Mono';}
-
-.nav-link{ margin-right: 1em !important;}
-
-.dropdown-item{ background: #f4f4f4; color: #0f0e0c}
-
-.navbar-brand:hover{ background: #0f0e0c; color: #f4f4f4; }
-
-.nav-link:hover{ background: #0f0e0c; color: #f4f4f4; }
-
-.dropdown-item:hover{ background: #0f0e0c; color: #f4f4f4; }
-
-.navbar-collapse{ justify-content: flex-end;}
-
-.navbar-toggler{ background: rgba(0,0,0,0) !important; }
-
-.navbar-toggler-icon{ background-image: url("icons/menu-24px.svg"); }
-
-.btn-outline-secondary{ color: #f4f4f4; background-color: #000000; border-color: #eedc6e; border-width: medium;}
-
-.border-secondary{ color: #f4f4f4; background-color: rgba(15, 18, 30, 1); border-color: #eedc6e; border-width: medium;}
-
-.header{
- animation: fadeInAnimation ease 2s;
- animation-iteration-count: 1;
- animation-fill-mode: forwards;
- background-attachment: fixed;
- background-size: cover;
- background-position: center;
-}
-
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-     }
-}
-
-.overlay{
- position: absolute;
- min-height: 100%;
- min-width: 100%;
- left: 0;
- top: 0;
- background: rgba(10, 10, 10, 0.5);
-}
-
-.descriptioncent{
-    text-align: center;
-    font-family: 'Overpass Mono';
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    right: 20%;
-    padding: 2em;
-    text-shadow: 2px 2px #0f0e0c
-}
-
-.description{
-    font-family: 'Overpass Mono';
-    position: absolute;
-    margin: auto;
-    top: 30%;
-    right: 20%;
-    left: 20%;
-    padding: 2em;
-    text-shadow: 2px 2px #0f0e0c
-}
-
-.panels{
-  animation: fadeInAnimation ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  text-align: center;
-  font-family: 'Overpass Mono';
-  margin: 0 10% 0 10%;
-  padding: 2em;
-}
-
-.card {
-  display: inline-block;
-}
-
-.card-body {
-  color:#f4f4f4;
-}
-
-.col_list {
-  list-style-type: none;
-  border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  color: white;
-  font-size: 25px;
-}
-
-.col_list:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-}
-
-.col_list li {
-  border-bottom: 1px solid #eee;
+img {
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  overflow: visible;
   padding: 20px;
-  text-align: center;
 }
 
-.col_list .grey {
-  background-color: rgb(92, 92, 92);
-  font-size: 20px;
+#top-badge {
+  position: absolute;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  top: 10px;
+  left: 5vh;
+  z-index: 3;
+}
+
+#socials {
+  position: absolute;
+  align-items: center;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  bottom: 5vh;
+  left: 5vh;
+  height: 5vh;
+  width: 12vw;
+  z-index: 3;
+}
+
+#menu {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+#menu-items {
+  margin-left: clamp(4rem, 12vw, 48rem);
+  position: relative;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+#menu-overlay {
+  background: #DDDDDD;
+  opacity: 0.1;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  transition: background 800ms ease;
+  z-index: 1;
+}
+
+#menu-image {
+  background: #FFFFFF;
+  opacity: 0.8;
+  background-position: 50% 50%;
+  background-size: 50vmin 50vmin;
+  height: 70vh;
+  right: 10vw;
+  position: absolute;
+  top: 15vh;
+  width: clamp(300px, 30vw, 2000px);
+  transition: background 800ms ease;
+  z-index: 1;
+}
+
+#menu-background-pattern {
+  --bg: #DDDDDD;
+  opacity: 0.8;
+  background: radial-gradient(circle, transparent 20%, var(--bg) 20%, var(--bg) 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, var(--bg) 20%, var(--bg) 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#BBBBBB 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #BBBBBB 2px, var(--bg) 2px) -1px 0;
+  background-position: 0% 0%;
+  background-size: 10vmin 10vmin;
+  height: 100vh;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease,
+    background-size 800ms ease,
+    background-position 800ms ease,
+    bg 800ms ease;
+  width: 100vw;
+  z-index: 1;
+}
+
+#menu-items:hover ~ #menu-background-pattern {
+  background-size: 12vmin 12vmin;
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item {
+  color: white;
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1;
+}
+
+.menu-item {
+  color: #FAFAFA;
+  cursor: pointer;
+  display: block;
+  font-family: 'Overpass Mono', serif;
+  font-size: clamp(3rem, 8vw, 8rem);
+  padding: clamp(0.25rem, 3vh, 1rem) 0rem;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px black;
+  transition: opacity 400ms ease, color 400ms ease;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -25%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -50%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -75%;
+}
+
+#menu[data-active-index="3"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+
+#menu[data-active-index="0"] > #menu-overlay {
+  background: #26ff9a;
+}
+
+#menu[data-active-index="1"] > #menu-overlay {
+  background: #0bd0ea;
+}
+
+#menu[data-active-index="2"] > #menu-overlay {
+  background: #0b30ea;
+}
+
+#menu[data-active-index="3"] > #menu-overlay {
+  background: #ea0baf;
+}
+
+
+#menu[data-active-index="0"] > #menu-image {
+  background: #26ff9a;
+}
+
+#menu[data-active-index="1"] > #menu-image {
+  background: #0bd0ea;
+}
+
+#menu[data-active-index="2"] > #menu-image {
+  background: #0b30ea;
+}
+
+#menu[data-active-index="3"] > #menu-image {
+  background: #ea0baf;
 }

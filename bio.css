@@ -10,6 +10,8 @@
 
 #box1 {
     padding: 10px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #box2 {
@@ -21,7 +23,7 @@
     text-align: justify;
     border: solid 1px black;
     border-radius: 20px;
-    background: #1F1F1F70;
+    background: #CCCCCC70;
     width: 90%;
     margin: 0 auto;
 }

@@ -13,30 +13,29 @@
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="main.css">
 
-    <title>Engineering</title>
+    <title>Projects</title>
 
   </head>
-    <body>
-      <!-- Navbar -->
-      <nav id="NAVMENU" class="navbar navbar-expand-lg fixed-top "></nav>
-      <script src="header.js"></script>
 
-      <!-- Set background -->
-      <style>
-      header {
-        background-image: url('images/nimbuswindtunnel.jpg');
-      }
-      </style>
+<body>
+
+  <header>
+    <div id="top-badge">
+      <a href="index.html"><h3>Home</h3></a>
+    </div>
+  </header>
 
     <header class="header">
-      <div class="overlay"></div>
       <div class="container">
-        <div class="descriptioncent" style="background-color:rgba(14, 14, 10, 0.7); border-color: #eedc6e; border-width: 5px; border-radius: 1%">
-          <h1> Built different. </h1>
+        <div style="background-color:rgba(14, 14, 10, 0.7); width: 100%; margin: 5%; padding: 5%; border-color: #eedc6e; border-width: 5px; border-radius: clamp(30px, 4vh, 60px);">
+          <h1> Built. </h1>
           <br>
-          <h3>I like seeing things come to life. Below you'll find my software and hardware projects. And miscellaneous fun stuff.</h3>
+          <h3>There's nothing more satisfying than bringing an idea to life (however silly it may be).</h3>
+        </div>
+      </div>
     </header>
-          <div class="row">
+
+          <div class="card-columns">
 
             <div class="column">
               <div class="card">
@@ -47,7 +46,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">Belousov Zhabotinsky Automaton</h3>
+                  <h2 class="card-title">Belousov Zhabotinsky Automaton</h2>
                   <p class="card-text">Math and modeling for a course in partial differential equations. Here I examined a less-studied supposed model of a chemical reaction that makes waves!</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -63,7 +62,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">SEV G█████ Battery Enclosure</h3>
+                  <h2 class="card-title">SEV G█████ Battery Enclosure</h2>
                   <p class="card-text">Thermal and mechanical design of a new, significantly larger battery for MIT Solar Car's next vehicle. Work in progress.</p>
                   <a href="" class="btn btn-outline-secondary">Coming soon!</a>
                 </div>
@@ -79,7 +78,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">LIGO Gravitational Waves</h3>
+                  <h2 class="card-title">LIGO Gravitational Waves</h2>
                   <p class="card-text">Some data science practice using LIGO interferometer open data. In summary, signal processing and analysis of a black hole merger.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -95,7 +94,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">SEV Nimbus Canopy Mechanisms</h3>
+                  <h2 class="card-title">SEV Nimbus Canopy Mechanisms</h2>
                   <p class="card-text">Latching and hinging of the driver bubble canopy for MIT Solar Car's Nimbus, winner of the 2021 American Solar Challenge.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -111,7 +110,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">MPPT Solar Charge Controller</h3>
+                  <h2 class="card-title">MPPT Solar Charge Controller</h2>
                   <p class="card-text">I was given a large solar panel for free, and wanted to use it. A pile of electronics that currently charges my family's mobile devices, but which can charge batteries too.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -127,7 +126,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">Python/Rust Lattice Annealing</h3>
+                  <h2 class="card-title">Python/Rust Lattice Annealing</h2>
                   <p class="card-text">First hacked together to solve an exam problem in my statmech class, this code simulates how crystal structures form to minimize energy. The visualization part of the Rust version is now a bit broken, sadly.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -143,7 +142,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">Feature-Sparse Reconstruction</h3>
+                  <h2 class="card-title">Feature-Sparse Reconstruction</h2>
                   <p class="card-text">In order to study <a href="#">shattering deuterium neon</a> pellets, I needed some tools. With synchronized high-speed cameras, I attempted to localize and estimate sizes in a cloud of fragments.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -159,7 +158,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">PDE Numerical Stability</h3>
+                  <h2 class="card-title">PDE Numerical Stability</h2>
                   <p class="card-text">A brief study of when a handful of finite difference schemes for solving partial differential equations break down.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -175,7 +174,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">IoT Flat Panel Lamp</h3>
+                  <h2 class="card-title">IoT Flat Panel Lamp</h2>
                   <p class="card-text">I had an idea to turn the optics of a computer screen's backlight into a lamp. My roommates naturally decided to make it into an IoT device.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -191,7 +190,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">MIT 8.223 <br> Trebuchet</h3>
+                  <h2 class="card-title">MIT 8.223 <br> Trebuchet</h2>
                   <p class="card-text">For the final project in an analytical mechanics class, a friend and I put together a trebuchet which, lamentably, does not throw 90kg stones 300m.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -207,7 +206,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">tEp Sub Doorbell Oscillator</h3>
+                  <h2 class="card-title">tEp Sub Doorbell Oscillator</h2>
                   <p class="card-text">See that function generator? It's getting replaced with this cardboard box on top. I always thought it was wasteful to continuously draw 40W just to provide signal for a doorbell.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -223,7 +222,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">Discord Counting Channel Bot</h3>
+                  <h2 class="card-title">Discord Counting Channel Bot</h2>
                   <p class="card-text">To document the emergent phenomenon of people in Discord channels deciding to spontaneously send messages counting up, I built a bot to track peoples' counting and display analytics.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -239,7 +238,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">AP Government Cap Tracker</h3>
+                  <h2 class="card-title">AP Government Cap Tracker</h2>
                   <p class="card-text">This was a very, very, very dumb idea. Google Sheets is not a backend.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -255,7 +254,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">C++ Runge-Kutta Library</h3>
+                  <h2 class="card-title">C++ Runge-Kutta Library</h2>
                   <p class="card-text">At this point, I don't remember what inspired me to implement this in high school, but serendipitously it's been useful a few times since then.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -271,7 +270,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">Experimental Breads</h3>
+                  <h2 class="card-title">Experimental Breads</h2>
                   <p class="card-text">Pretty much exactly what you'd expect. A catalog of some of my breads.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>
@@ -287,7 +286,7 @@
                   </a>
                 </div>
                 <div class="card-body border-secondary">
-                  <h3 class="card-title">FRC Robot Chassis</h3>
+                  <h2 class="card-title">FRC Robot Chassis</h2>
                   <p class="card-text">I designed things for my high school robotics team.</p>
                   <a href="" class="btn btn-outline-secondary">View</a>
                 </div>

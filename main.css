@@ -178,7 +178,7 @@ img {
   cursor: pointer;
   display: block;
   font-family: 'Overpass Mono', serif;
-  font-size: clamp(3rem, 8vw, 8rem);
+  font-size: clamp(3rem, 12vh, 7rem);
   padding: clamp(0.25rem, 2vh, 0.5rem) 0rem;
   text-decoration: none;
   text-shadow: 2px 2px 4px black;

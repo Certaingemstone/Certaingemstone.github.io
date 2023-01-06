@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spontaneous Counting</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Other CSS -->
+  <link href='https://fonts.googleapis.com/css?family=Overpass Mono' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="../main.css">
+  <link rel="stylesheet" type="text/css" href="../bio.css">
+</head>
+
+<body>
+
+  <header>
+    <div id="top-badge">
+      <a href="../index.html"><h3>Home</h3></a>
+    </div>
+  </header>
+
+  <div class="box-wrapper">
+    <div class="spacer"></div>
+    <div id="box1">
+        <h1>countmigone</h1>
+        <p>For some reason, people find it entertaining to count in Discord channels. I deployed analytics in the form of this Discord bot.
+        </p>
+        <h3><a href="https://github.com/Certaingemstone/discord-counting-analyzer">Git repo</a>  |
+    </div>
+
+    <div id="box3">
+        <p>I'm not sure if you've experienced this yourself, but in any given chat, for some reason people will occasionally start sending numbers counting up. I've seen it
+          develop spontaneously and independently in 3 different Discord communities, and each eventually implemented a dedicated channel. For counting.
+        </p>
+        <p>It's an interesting social question, of why collaboration on an inexorable trek toward infinity in a chat would so inspire people,
+        but in addition I was curious as to the statistics of this activity. Who's counting, when are they counting, how much and how accurate is the counting, and so on?
+        That's what I designed this Discord bot (i.e. a special type of account that can perform automated tasks) to do.</p>
+        <p>Written in Python using the <a href="https://github.com/Rapptz/discord.py">discordpy</a> wrapper to the Discord API, the bot reads and parses messages
+        in the server's assigned counting channel. Then, it references and updates an SQL database for the (in some cases hundreds of thousands of) counts,
+        in order to then reduce and plot data, provide leaderboards and stats, activity heatmaps, counting error detections, etc.</p>
+        <p>I tested this on a server with over 100,000 counts by hundreds of unique users over the years. What did I find? Honestly, not much interesting. But it's a fun toy.</p>
+        <p>Some things I need to work on before deploying this in the wild: input sanitization, cleaner-looking output.</p>
+    </div>
+
+</body>
+
+</html>

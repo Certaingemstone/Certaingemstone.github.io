@@ -29,10 +29,10 @@
     <div id="box1">
         <h1>mcscatter</h1>
         <p>Sampling from the Klein-Nishina cross section and using an approximation to the Sauter equation, this parallel C++
-          program simulates scattering and absorption of photons from 10keV to 700keV. Define materials, set up geometry, and extract
+          program simulates scattering and absorption of photons from 10keV to 700keV. Define materials, set up 3D geometry, and extract
           information about photon paths and the energy spectra of interactions with different objects. Then, visualize in a Jupyter notebook!
         </p>
-        <h3><a href="https://github.com/Certaingemstone/mcscatter">Git repository</a>  |  <a href="">Main project paper</a>
+        <h3><a href="https://github.com/Certaingemstone/mcscatter">Git repo</a>  |  <a href="https://docs.google.com/presentation/d/1ceHvPzkfz4tiKy3fF_9-5LSHq0r22lnSvWaHNIUk-dA/edit?usp=sharing">Slides</a>  |  <a href="resources/Compton_Scattering.pdf">Main project paper</a>
     </div>
 
     <div id="box3">
@@ -40,7 +40,27 @@
         like many others, chose to recreate Arthur Compton's legendary 1923 experiment demonstrating that in some limits, light is
         more accurately described as a particle. Specifically, the energies of photons scattering off of electrons are
         lowered, <i>depending on the scattering angle</i>, just like particles bouncing off each other. To measure this, we set up
-        two scintillator detectors, one for gamma rays to scatter off of, and another for them to scatter into.</p>
+        two scintillator detectors, one for gamma rays to scatter off of, and another for them to scatter into. The scintillators,
+        which interact via scattering and absorption of the gamma rays, emit light which is amplified by photomultipliers and converted
+        into a signal which can be calibrated against known gamma ray spectra.</p>
+
+        <p>By varying the detector placement, and using a temporal coincidence gating scheme to filter out irrelevant events,
+        we can measure the angular dependence of scattering energies and validate Compton's predictions. But as usual, there's
+        a catch. The detectors are large 3D objects, occupying a 10-degree solid angle due to constraints of our setup.
+        This means the "angle" we measure probably isn't the true angle of scattering events being registered.</p>
+
+        <p>To capture these factors, I developed a Monte Carlo simulation, assuming that Compton shift, Klein-Nishina scattering, and gamma
+        absorption cross sections were correct. The idea was to predict the distribution of energies deposited in each detector, and see if
+        they agreed with experimental data. The simulation would also give the distribution of represented angles for a particular detector
+        position.</p>
+
+        <p>The simulation was remarkably successful, given the assumptions that went into it. And it was pretty too! Correcting our data for the true angular
+        distribution, we found good agreement at large scattering angles. At lower angles, disagreement between data and simulation supported our hunch
+        during the experimental run: that somehow our coincidence gating setup was disproportionately rejecting low-energy events in the primary detector.
+        Of course, the simulation provides what to expect in a non-gated situation, which would allow us to repeat the experiment without this source of
+        systematic error.</p>
+
+        <p>If you're working with hard x-rays or gamma rays and want to give this a shot yourself, take a look at the readme on <a href="https://github.com/Certaingemstone/mcscatter">GitHub</a>. Feel free to reach out with any questions!</p>
     </div>
 
 </body>

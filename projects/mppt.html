@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunlight</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Other CSS -->
+  <link href='https://fonts.googleapis.com/css?family=Overpass Mono' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="../main.css">
+  <link rel="stylesheet" type="text/css" href="../bio.css">
+</head>
+
+<body>
+
+  <header>
+    <div id="top-badge">
+      <a href="../index.html"><h3>Home</h3></a>
+    </div>
+  </header>
+
+  <div class="box-wrapper">
+    <div class="spacer"></div>
+    <div id="box1">
+        <h1>mppt</h1>
+        <p>My janky solar charge controller, built from scavenged parts and designed for 240W, works with a panel in the back yard.
+        </p>
+        <h3><a href="https://github.com/Certaingemstone/SolChgCtrl">Git repo</a>  |  <a href="">Schematic</a>
+    </div>
+
+    <div id="box3">
+        <p>After my dad's friend who does commercial solar donated a decommissioned panel to me, I decided to take on my first
+        electronics project. In my tenure with the <a href="https://www.mitsolar.com">MIT Solar Electric Vehicle Team</a>, I'd learned about
+        MPPT charge controllers: devices which optimally deliver power from variable sources. This was my goal.</p>
+        <p>I built my device around a buck converter, with an Arduino controlling the duty cycle.
+        It's able to support constant current, constant voltage, and perturb-and-observe maximum-power (MPPT) output modes,
+        making it theoretically suitable for battery charging, but for now it just feeds a constant 15V into some car USB chargers
+        to top up my family's devices.</p>
+        <p>The whole thing was built using parts pulled off old electronics and assembled on a variety of supports as I was prototyping.
+          Notable members: a desoldered PCB where I manually cut traces to get the desired connectivity, and a segment of an electronic dartboard.
+          The crown jewel of jankiness: a 2x3mm 5-pin(!) surface-mount differential amplifier for current sensing that I <i>hand-soldered</i> to wires.
+          It ain't pretty by any means, <b>but it's been working continuously for 3 years.</b> I do intend for my next project to look nicer. Any ideas?</p>
+    </div>
+
+</body>
+
+</html>

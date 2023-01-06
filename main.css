@@ -60,7 +60,7 @@ img {
   background: #eedc6e;
   color: black;
   font-family: 'Oxygen', sans-serif;
-  font-size: clamp(0.5rem, 1vw, 3rem);
+  font-size: clamp(1rem, 1.2vw, 3rem);
   text-decoration: none;
   text-shadow: none;
 }

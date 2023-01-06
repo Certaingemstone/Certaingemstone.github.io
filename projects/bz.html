@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BZ Spiral Waves</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Other CSS -->
+  <link href='https://fonts.googleapis.com/css?family=Overpass Mono' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="../main.css">
+  <link rel="stylesheet" type="text/css" href="../bio.css">
+</head>
+
+<body>
+
+  <header>
+    <div id="top-badge">
+      <a href="../index.html"><h3>Home</h3></a>
+    </div>
+  </header>
+
+  <div class="box-wrapper">
+    <div class="spacer"></div>
+    <div id="box1">
+        <h1>belousov-zhabotinsky</h1>
+        <p>Implemented in Rust, cellular automata following partial differential equations making pretty patterns.
+        </p>
+        <h3><a href="https://github.com/Certaingemstone/reactdiff">Git repo</a>  |  <a href="resources/simple_bz.pdf">Project paper</a>
+    </div>
+
+    <div id="box3">
+        <p>A few years ago, I ran into this <a href="https://youtu.be/LL3kVtc-4vY">NileRed video</a> of a reaction due to Belousov and Zhabotinsky, which produces beautiful spiraling or pulsing wave patterns.
+          When my course in partial differential equations (MIT 18.300) came to looking for final project topics, I hopped on the train.
+          My idea was to recreate <a href="https://www.researchgate.net/publication/32899184_A_simple_model_of_the_Belousov-Zhabotinsky_reaction_from_first_principles">this paper</a>
+          which claimed to model the reaction using cellular automata (grids with rules, like Conway's Game of Life) based on a simplified analytical model.
+        </p>
+        <p>I stared at the equations a bit, and I was rather skeptical that the model was accurate given the explanation from the NileRed video and my other readings.
+           Still, I went ahead and implemented it in Rust, and indeed the model produces waves. However, an analytical and numerical interrogation of the equations reveals
+           that the system being modeled here is fundamentally different from the accepted reaction model, and isn't quite just a directly "simplified" model.
+           Additionally, I wanted to implement an implicit-explicit (ImEx) scheme to solve the same system, but ended up running out of time.
+        </p>
+        <p>Overall, it was an interesting experience. If you'd like to read more, learn about the math, and see all the plots, take a look at the project paper!</p>
+    </div>
+
+</body>
+
+</html>

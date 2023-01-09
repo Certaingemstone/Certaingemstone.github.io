@@ -27,14 +27,53 @@
   <div class="box-wrapper">
     <div class="spacer"></div>
     <div id="box1">
-        <h1>lattice simulated annealing</h1>
-        <p>Cell
+        <h1>forming lattices</h1>
+        <p>Crystals minimize energy. I wanted to see what structures arise, ab initio.
         </p>
         <h3><a href="https://github.com/Certaingemstone/LatticeAnneal">Git repo (py)</a>  |  <a href="https://github.com/Certaingemstone/rust-anneal">Git repo (rust)</a>
     </div>
 
     <div id="box3">
-        <p></p>
+        <p>Suppose you're doing a take-home final exam in statistical physics. The last question is as follows:
+        Consider a triangular lattice, i.e. the vertices in a plane tiled by equilateral triangles.
+        Particles can occupy any lattice site, but there is an energy cost (e.g. electrostatic repulsion)
+        to having particles in "adjacent" sites. Suppose 2 of 3 sites are occupied. What structure
+        will the particles fall into, that minimizes the interaction energy?
+        </p>
+        <p>There's an analytical argument that can be made, which I eventually came up with, that
+        the resulting structure is like a honeycomb on this lattice. However, I wanted to <i>see</i> that
+        this was the case. I'd heard a year earlier about simulated annealing from a friend who was trying to
+        do parameter optimization on a trebuchet, and thought that this situation would make for a very
+        literal application. I cracked open my favorite text editor <i>(rest in peace, Atom)</i> for some hacky Python.
+        </p>
+        <p>The idea is pretty simple. From statistical mechanics, we know a system occupies states
+        of different energies with relative probabilities determined by the corresponding Boltzmann factor.
+        This Boltzmann factor depends on the thermodynamic temperature of the system and the state's energy.
+        Higher energy states are exponentially suppressed in probability, with this suppression getting stronger with lower temperature.
+        What we can do, then, is consider the state transitions (i.e. moving to an adjacent lattice point)
+        accessible to a given particle, and transition according
+        to this probability (staying in the same place is also a valid "transition").
+        </p>
+        <p>Starting from a randomly filled lattice and a high temperature, we then perform these
+        transitions randomly and gradually lower the temperature. With slow cooling, the system
+        is likely to end up near its equilibrium (lowest energy) state.
+        </p>
+        <p>If you're not familiar, it's called "simulated annealing" because it's kind of like
+        how a metallurgist anneals a piece of metal. They raise it to high temperatures,
+        to encourage atoms to move around, and then slowly cool it down, allowing these moving
+        atoms to fill in vacancies and repair defects in crystal structure.
+        </p>
+        <p>Indeed, over a sufficiently long period of time and a large enough lattice (my periodic
+        boundary conditions introduced some irregularities at the edges), the result was many regions
+        of the expected honeycomb-like pattern. In between these regions there were messy bits;
+        I guess these are like grain boundaries in a real polycrystalline material! Seeing this,
+        I went ahead and submitted the exam.
+        </p>
+        <p>These things were best visualized in my follow-up (more computationally efficient, and well-organized)
+        Rust implementation, except I relied on this one random drawing library that seems to not work anymore.
+        Someday, I'll come back and fix it, but for now you're welcome to play with the code yourself! The Rust
+        version also allows you to define your own lattices and interactions.
+        </p>
     </div>
 
 </body>

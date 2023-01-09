@@ -28,13 +28,33 @@
     <div class="spacer"></div>
     <div id="box1">
         <h1>subwoofer doorbell</h1>
-        <p>Cell
+        <p>A square wave generator with tunable frequency and amplitude, to control a subwoofer.
         </p>
         <h3><a href="">Schematic</a>  |
     </div>
 
     <div id="box3">
-        <p></p>
+        <p>The co-op I call home uses a large subwoofer as a doorbell, driven by a signal
+        from a 30+ year-old function generator. Not to speak of the overall system, the
+        latter alone is quoted at nearly 40W (it has active cooling). The power drawn by the subwoofer-amplifier
+        is more or less unavoidable if we want an instant response, but I figured it's a bit of a waste to have the function generator
+        running continuously, especially when we're paying energy for functionalities we don't need; the output
+        was just a 44Hz sine wave, after all.</p>
+        <p>My goal was to replace this function generator with a more specialized, lower-power device.
+        I figured a square wave would do just as well, what with the subwoofer effectively being a low-pass filter.
+        To get this, I set up a 555 timer for 50% duty cycle with a potentiometer and a switch between low and high capacitance
+        on the timing RC circuit. This would let me tune the frequency about an order of magnitude with the pot, and
+        an additional order of magnitude with the switch.
+        </p>
+        <p>Variable frequency square wave in hand, the next order of business was to restrict the output amplitudes.
+        I decided the easiest way to do this was with another potentiometer and resistors, setting up a voltage divider.
+        The whole deal was powered from a cheap LM7805, and from experience we didn't need peak-to-peak voltages over 2V,
+        so the values were set appropriately. To then get a low impedance output from this, I used a simple op-amp buffer,
+        and limited its current with another resistor.
+        </p>
+        <p>Then, all that was left to do was plug it in! With Boston electrical prices as of 2021, this would save us
+        around $25-30 per year, for an investment of less than $5 and a few hours. I guess it just isn't as cool as the function generator, though.
+        </p>
     </div>
 
 </body>
